@@ -13,7 +13,7 @@ package com.dyzwj.designmode.singleton;
 public class DoubleCheckLazy {
 
 
-    private static DoubleCheckLazy singleton = null;
+    private static volatile DoubleCheckLazy singleton = null;
 
     private DoubleCheckLazy(){}
 

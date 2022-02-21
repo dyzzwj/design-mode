@@ -10,8 +10,16 @@ package com.dyzwj.designmode.singleton;
 public class EnumClass {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         EnumClass instance = Enum.INSTACNE.getInstance();
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            Object o = new Object();
+            if(i % 10 == 0){
+                Thread.sleep(200);
+            }
+        }
+
+
     }
     enum Enum{
         INSTACNE;

@@ -1,5 +1,8 @@
 package com.dyzwj.designmode.singleton;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 懒汉式
  *
@@ -25,6 +28,19 @@ public class Lazy {
             }
             return instance;
         }
+    }
+
+
+    public static void main(String[] args) {
+        Map<String,String> map = new HashMap<>();
+        map.put("aa","bb");
+        getMap(map);
+
+        System.out.println(map);
+    }
+
+    private static void getMap(Map<String, String> map) {
+        map = new HashMap<>();
     }
 
 }
